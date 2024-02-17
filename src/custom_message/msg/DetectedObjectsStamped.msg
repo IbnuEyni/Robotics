@@ -1,0 +1,2 @@
+std_msgs/Header header
+custom_message/DetectedObject[] detected_objects

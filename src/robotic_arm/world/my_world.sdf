@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+    <plugin name="gazebo_ros_state" filename="libgazebo_ros_state.so">
+      <ros>
+        <namespace>/gazebo</namespace>
+        <argument>model_states:=model_states_demo</argument>
+        <argument>link_states:=link_states_demo</argument>
+      </ros>
+
+      <update_rate>1.0</update_rate>
+    </plugin>
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <!-- A ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- Workbench -->
+    <include>
+      <uri>/home/amir/School/robotics/robotic_arm_final/src/robotic_arm/models/workbench</uri>
+      <pose>0.7 0 0.1 0 0 0</pose>
+      <static>1</static>
+    </include>
+
+    <!-- Underbin bench -->
+    <include>
+      <uri>/home/amir/School/robotics/robotic_arm_final/src/robotic_arm/models/underbin_bench</uri>
+      <pose>-0.55 0 0.05 0 0 0</pose>
+      <static>1</static>
+    </include>
+
+    <!-- Bins -->
+    <include>
+      <uri>/home/amir/School/robotics/robotic_arm_final/src/robotic_arm/models/bin_red</uri>
+      <pose>-0.5 -0.27 0.11 0 0 0</pose>
+      <static>1</static>
+      
+    </include>
+
+    <include>
+      <uri>/home/amir/School/robotics/robotic_arm_final/src/robotic_arm/models/bin_green</uri>
+      <pose>-0.5 0 0.11 0 0 0</pose>
+      <static>1</static>
+    </include>
+
+    <include>
+      <uri>/home/amir/School/robotics/robotic_arm_final/src/robotic_arm/models/bin_blue</uri>
+      <pose>-0.5 0.27 0.11 0 0 0</pose>
+      <static>1</static>
+    </include>
+
+    <!-- Blocks -->
+    <include>
+      <uri>/home/amir/School/robotics/robotic_arm_final/src/robotic_arm/models/block_red</uri>
+      <pose>0.4 -0.22 0.115 0 0 0</pose>
+      <name>block_red_1</name>
+    </include>
+
+    <include>
+      <uri>/home/amir/School/robotics/robotic_arm_final/src/robotic_arm/models/block_red</uri>
+      <pose>0.4 0.22 0.115 0 0 0</pose>
+      <name>block_red_2</name>
+    </include>
+
+    <include>
+      <uri>/home/amir/School/robotics/robotic_arm_final/src/robotic_arm/models/block_blue</uri>
+      <pose>0.6 0.22 0.115 0 0 0</pose>
+      <name>block_blue_1</name>
+    </include>
+    <include>
+      <uri>/home/amir/School/robotics/robotic_arm_final/src/robotic_arm/models/block_green</uri>
+      <pose>0.45 0.0 0.115 0 0 0</pose>
+      <name>block_green_1</name>
+    </include>
+
+    <!-- Camera -->
+    <include>
+      <uri>/home/amir/School/robotics/robotic_arm_final/src/robotic_arm/models/kinect</uri>
+      <pose>0.6 0 1.2 0 1.57 0</pose>
+      <static>1</static>
+    </include>
+    
+  </world>
+</sdf>
